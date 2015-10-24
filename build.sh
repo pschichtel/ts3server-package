@@ -48,7 +48,7 @@ cp -R "${unpacked}/redist" "${build}/var/lib/${package}"
 mkdir -p "${build}/var/log/${package}"
 
 dpkg-deb --build "$build"
-mv "$build/$(basename "$build").deb" "${package}_${version}-${rev}"
+mv "${tmp}/$(basename "$build").deb" "${package}_${version}-${rev}"
 
 rm -Rf ${tmp}
 
