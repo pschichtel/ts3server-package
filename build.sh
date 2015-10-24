@@ -4,16 +4,16 @@ package="ts3server"
 arch=amd64
 version=3.0.11.4
 rev=1
-name="teamspeak3-server_linux-${arch}"
 
 tmp=$(mktemp -d)
 echo "Working in $tmp"
 
+binname="teamspeak3-server_linux-${arch}"
 dl="${tmp}/${package}.tar.gz"
-wget "-O${dl}" "http://dl.4players.de/ts/releases/${version}/${name}-${version}.tar.gz"
+wget "-O${dl}" "http://dl.4players.de/ts/releases/${version}/${binname}-${version}.tar.gz"
 tar xf "$dl" -C "$tmp"
 rm "$dl"
-unpacked="${tmp}/${name}"
+unpacked="${tmp}/${binname}"
 
 build="${tmp}/build"
 
