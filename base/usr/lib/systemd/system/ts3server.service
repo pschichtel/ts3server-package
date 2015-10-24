@@ -1,0 +1,17 @@
+[Unit]
+Description=TeamSpeak 3 Server
+After=network.target
+
+[Service]
+WorkingDirectory=/var/lib/ts3server
+EnvironmentFile=-/etc/default/ts3server
+User=ts3server
+Group=ts3server
+Type=simple
+ExecStart=/usr/bin/ts3server inifile=/etc/ts3server/server.ini
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
+
+

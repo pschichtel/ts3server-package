@@ -1,0 +1,8 @@
+Package: ts3server
+Version: __VERSION__
+Section: base
+Priority: optional
+Architecture: __ARCH__
+Maintainer: Phillip Schichtel <phillip.debian@schich.tel>
+Description: TeamSpeak 3 Server
+

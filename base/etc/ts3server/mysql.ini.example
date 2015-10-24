@@ -1,0 +1,8 @@
+[config]
+host='localhost'
+port='3306'
+username='ts3server'
+password='change_me'
+database='ts3server'
+socket=
+
