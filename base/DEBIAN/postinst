@@ -4,3 +4,9 @@ home="/var/lib/ts3server"
 adduser --system --home "$home" "ts3server"
 
 chown -R ts3server:nogroup "$home" /var/log/ts3server
+
+systemctl daemon-reload
+if systemctl is-enabled ts3server.service
+then
+    service ts3server start
+fi
