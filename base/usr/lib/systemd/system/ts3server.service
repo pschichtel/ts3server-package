@@ -6,7 +6,7 @@ After=network.target
 WorkingDirectory=/var/lib/ts3server
 EnvironmentFile=-/etc/default/ts3server
 User=ts3server
-Group=ts3server
+Group=nogroup
 Type=simple
 ExecStart=/usr/bin/ts3server inifile=/etc/ts3server/server.ini
 Restart=always
