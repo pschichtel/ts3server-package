@@ -1,12 +1,12 @@
 #!/bin/sh
 
-if [[ "$1" == "purge" ]]
+if [ "$1" == "purge" ]
 then
     rm -Rf /var/log/ts3server
     rm -Rf /var/lib/ts3server
 fi
 
-if [[ "$1" == "remove" -o "$1" == "purge" ]]
+if [ "$1" == "remove" -o "$1" == "purge" ]
 then
     getent passwd ts3server && deluser ts3server
 fi
