@@ -1,3 +1,3 @@
 #!/bin/sh
 
-#deluser --system ts3server
+deluser ts3server
