@@ -2,15 +2,15 @@
 
 package="ts3server"
 arch=amd64
-version=3.0.11.4
+version=3.0.12.1
 rev=1
 
 tmp=$(mktemp -d)
 echo "Working in $tmp"
 
-binname="teamspeak3-server_linux-${arch}"
+binname="teamspeak3-server_linux_${arch}"
 dl="${tmp}/${package}.tar.gz"
-wget "-O${dl}" "http://dl.4players.de/ts/releases/${version}/${binname}-${version}.tar.gz"
+wget "-O${dl}" "http://dl.4players.de/ts/releases/${version}/${binname}-${version}.tar.bz2"
 tar xf "$dl" -C "$tmp"
 rm "$dl"
 unpacked="${tmp}/${binname}"
@@ -27,7 +27,7 @@ sed -i \
     "${build}/DEBIAN/control"
 
 mkdir -p "${build}/usr/bin"
-cp "${unpacked}/ts3server_linux_${arch}" "${build}/usr/bin/ts3server"
+cp "${unpacked}/ts3server" "${build}/usr/bin/ts3server"
 chmod +x "${build}/usr/bin/ts3server"
 
 mkdir -p "${build}/usr/lib"
