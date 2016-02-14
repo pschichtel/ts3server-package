@@ -1,13 +1,15 @@
 #!/bin/bash
 
-package="ts3server"
+# Customize here:
 arch=amd64
 version=3.0.12.1
 rev=1
+# stop customizing
 
 tmp=$(mktemp -d)
 echo "Working in $tmp"
 
+package="ts3server"
 binname="teamspeak3-server_linux_${arch}"
 dl="${tmp}/${package}.tar.gz"
 wget "-O${dl}" "http://dl.4players.de/ts/releases/${version}/${binname}-${version}.tar.bz2"
