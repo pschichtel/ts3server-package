@@ -2,7 +2,7 @@
 
 # Customize here:
 arch=amd64
-version=3.0.12.3
+version=3.0.13.6
 rev=1
 # stop customizing
 
