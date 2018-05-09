@@ -2,7 +2,7 @@
 
 # Customize here:
 arch=amd64
-version=3.0.13.8
+version=3.1.3
 rev=1
 # stop customizing
 
@@ -46,6 +46,7 @@ cp -a "${unpacked}/sql" "${build}/usr/share/${package}"
 
 mkdir -p "${build}/var/lib/${package}/files"
 cp -R "${unpacked}/redist" "${build}/var/lib/${package}"
+touch "${build}/var/lib/${package}/.ts3server_license_accepted"
 
 mkdir -p "${build}/var/log/${package}"
 
