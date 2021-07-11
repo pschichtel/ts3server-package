@@ -2,7 +2,7 @@
 
 # Customize here:
 arch=amd64
-version=3.4.0
+version=3.13.6
 rev=1
 # stop customizing
 
@@ -12,7 +12,8 @@ echo "Working in $tmp"
 package="ts3server"
 binname="teamspeak3-server_linux_${arch}"
 dl="${tmp}/${package}.tar.gz"
-wget "-O${dl}" "http://dl.4players.de/ts/releases/${version}/${binname}-${version}.tar.bz2"
+url="https://files.teamspeak-services.com/releases/server/${version}/${binname}-${version}.tar.bz2"
+wget "-O${dl}" "$url"
 tar xf "$dl" -C "$tmp"
 rm "$dl"
 unpacked="${tmp}/${binname}"
